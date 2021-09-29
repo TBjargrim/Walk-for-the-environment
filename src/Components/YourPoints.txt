@@ -1,0 +1,54 @@
+import React, { useEffect } from 'react'
+import {pastActivity} from '../Data/PastActivity'
+// import {WrapperYourPoints, Coins} from './CollectedData/ActivityStyle'
+import {FaCoins} from 'react-icons/fa'
+import {Styles} from '../Styles/GlobalStyling'
+
+import styled from 'styled-components'
+const WrapperYourPoints = styled.div`
+display:flex;
+justify-content:center;
+align-items:center;
+width: 259px;
+height: 70px;
+box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+border-radius: 30px;
+font-weight: normal;
+font-size: 24px;
+`
+const Coins = styled(FaCoins)`
+width: 25px;
+color: ${Styles.PrimaryPink};
+margin: 0 15px 0 0;
+`
+const YourPoints = ({sumPoints, setSumPoints}) => {
+
+    
+    useEffect(() =>{
+        // const countAllPoints = () =>{
+            let sum= 0;
+            let arr = []
+        
+            pastActivity.map((day) =>{
+                let all = day.points
+                 arr.push(all)
+                })
+                for(var i = 0; i < arr.length; i++){
+                    sum += arr[i]
+                    }
+        // console.log(typeof(sum))
+            setSumPoints(sum)
+    //     }
+    //     Uppdatera uträkningen direkt
+                },[])
+         
+    return (
+
+        <WrapperYourPoints>
+            <Coins/> 
+            <p>{sumPoints} p = {sumPoints} kr </p>
+        </WrapperYourPoints>
+    )
+}
+
+export default YourPoints
