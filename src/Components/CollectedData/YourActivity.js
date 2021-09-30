@@ -1,5 +1,5 @@
 import React,{children, useEffect} from 'react'
-import ModalSlideUP, { ModalDiv } from '../../ModalSlideUp'
+import ModalSlideUP from '../../ModalSlideUp'
 import {pastActivity} from '../../Data/PastActivity'
 
 import {Wrapper, StyledUL, ResultButton, Arrow, ModalContainer} from './ActivityStyle'
@@ -34,11 +34,11 @@ initialValue.map((day) =>{
      arrSteps.push(allS)
 
     })
-    for(var i = 0; i < arrPoints.length; i++){
+    for(let i = 0; i < arrPoints.length; i++){
         sumP += arrPoints[i]
         }
-    for(var i = 0; i < arrSteps.length; i++){
-        sumSteps += arrSteps[i]
+    for(let j = 0; j < arrSteps.length; j++){
+        sumSteps += arrSteps[j]
         }
 
      

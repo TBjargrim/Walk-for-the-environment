@@ -1,8 +1,11 @@
 import styled from 'styled-components'
+import {Styles} from '../../Styles/GlobalStyling'
 import {Buttons} from '../../Styles/GlobalStyling'
 import {FaCoins} from 'react-icons/fa'
-import {Styles} from '../../Styles/GlobalStyling'
+
+
 export const Wrapper = styled.div`
+margin-bottom:60px;
 display:flex;
 flex-direction:column;
 justify-content:center;
@@ -14,7 +17,9 @@ align-items:left;
     font-style: normal;
 font-weight: 500;
 font-size: 32px;`
+
 export const WrapperYourPoints = styled.div`
+background:${Styles.ColorWhite};
 display:flex;
 justify-content:center;
 align-items:center;
@@ -24,6 +29,9 @@ box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 border-radius: 30px;
 font-weight: normal;
 font-size: 24px;
+p{
+    color:${Styles.ColorBlack};
+}
 `
 export const Coins = styled(FaCoins)`
 width: 25px;

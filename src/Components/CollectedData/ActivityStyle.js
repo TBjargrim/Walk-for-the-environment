@@ -2,10 +2,9 @@ import styled from "styled-components"
 import {Styles} from '../../Styles/GlobalStyling'
 import {IoIosArrowUp} from'react-icons/io'
 
-import {FaCoins} from 'react-icons/fa'
 
 export const Wrapper = styled.div`
-height:100%;
+margin-bottom:60px;
 h3{
     display:flex;
     justify-content:flex-start;

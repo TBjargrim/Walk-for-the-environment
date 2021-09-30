@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import {buildStyles ,CircularProgressbarWithChildren } from 'react-circular-progressbar';
+import { CircularProgressbarWithChildren } from 'react-circular-progressbar';
 
 export const CountWrapper = styled.div`
 width:100%;

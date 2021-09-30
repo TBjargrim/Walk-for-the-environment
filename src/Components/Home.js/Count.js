@@ -1,11 +1,12 @@
 import React, {useEffect} from 'react'
 
 import 'react-circular-progressbar/dist/styles.css';
-import {buildStyles ,CircularProgressbarWithChildren } from 'react-circular-progressbar';
+import {buildStyles  } from 'react-circular-progressbar';
 import {CountWrapper, ProgressBar} from '../../Styles/HomeStyles'
 
 const Count = ({counter, setCounter, points, setPoints}) => {
 const end = 20000;
+
     useEffect((counter) => {
         const timer = setInterval(() => {
         setCounter(prevCount => prevCount + 1);

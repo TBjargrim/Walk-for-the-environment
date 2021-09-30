@@ -10,7 +10,7 @@ const InfoOrganisation = () => {
 
     return (
         <Wrapper>
-            <img src={icon}/>
+            <img src={icon} alt='icon of organisation'/>
            <p>{description}</p>
            <Button><Link to='/thankyou'>Donera</Link></Button>
         </Wrapper>

@@ -1,16 +1,16 @@
 import React from 'react'
-import {Link} from 'react-router-dom'
-import {Wrapper, Home, Activityicon, PointsIcon} from './Styling'
+
+import {Wrapper, Home, Activityicon, PointsIcon, StyledNavLink} from './Styling'
 
 const Navbar = () => {
 
     return (
         <Wrapper>
-      
-            {/* <Link to='/'>Landing</Link> */}
-            <Link to='/stepcounter'><Home/></Link>
-            <Link to='/activity'><Activityicon/></Link>
-            <Link to='/organisations'><PointsIcon/></Link>
+            <StyledNavLink to='/stepcounter' activeClassName='active'>
+                <Home/>
+                </StyledNavLink>
+            <StyledNavLink to='/activity' activeClassName="active"><Activityicon/></StyledNavLink>
+            <StyledNavLink to='/organisations' activeClassName="active"><PointsIcon/></StyledNavLink>
 
         </Wrapper>
     )

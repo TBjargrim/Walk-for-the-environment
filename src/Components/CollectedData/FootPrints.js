@@ -16,14 +16,15 @@ const FootPrints = ({setFootPrint, setAllSteps}) => {
         
             pastActivity.map((day) =>{
                 let all = day.steps
-                 arrSteps.push(all)
+                 return arrSteps.push(all)
+               
                 })
                 for(var i = 0; i < arrSteps.length; i++){
                 
                     sum += arrSteps[i]
                     
                     }
-           let sumStepsKg = sum * 0.00003
+        //    let sumStepsKg = sum * 0.00003
            let sumStepsGram = Math.round(sum * 0.03)
            
            useEffect(()=>{
