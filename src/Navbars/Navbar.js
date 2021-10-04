@@ -6,7 +6,7 @@ const Navbar = () => {
 
     return (
         <Wrapper>
-            <StyledNavLink to='/stepcounter' activeClassName='active'>
+            <StyledNavLink to='/home' activeClassName='active'>
                 <Home/>
                 </StyledNavLink>
             <StyledNavLink to='/activity' activeClassName="active"><Activityicon/></StyledNavLink>

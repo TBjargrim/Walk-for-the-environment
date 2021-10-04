@@ -2,7 +2,10 @@ import React, {useEffect} from 'react'
 
 import 'react-circular-progressbar/dist/styles.css';
 import {buildStyles  } from 'react-circular-progressbar';
-import {CountWrapper, ProgressBar} from '../../Styles/HomeStyles'
+
+import {ImageDiv, CountWrapper, ProgressBar} from './StylingStep'
+
+import FootPrints from '../../Images/FootPrints.png'
 
 const Count = ({counter, setCounter, points, setPoints}) => {
 const end = 20000;
@@ -31,10 +34,13 @@ const end = 20000;
             text={counter}
             styles={buildStyles({
                 textColor:'#0D0D0D',
-                trailColor: '#555455'
+                trailColor: '#555455',
+                pathColor: `linearGradient(#83C4FF,#FF1AB3) ${counter / 100})`,
             })}
             >
-                  {/* <img src="https://i.imgur.com/b9NyUGm.png" alt="doge" /> */}
+                <ImageDiv>
+                  <img src={FootPrints} alt="footprints" />
+                  </ImageDiv>
                   <p>Steg</p>
                 </ProgressBar>
                 </div>

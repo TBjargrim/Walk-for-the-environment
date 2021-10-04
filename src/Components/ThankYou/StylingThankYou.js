@@ -1,14 +1,29 @@
 import styled from "styled-components";
+import Park from '../../Images/Park.png'
 import {Styles} from '../../Styles/GlobalStyling'
 
 export const Wrapper = styled.div`
+height:100vh;
+width:100%;
+display:flex;
+padding:30px 0 0 0;
+flex-direction:column;
+align-items:center;
+background-image: url(${Park});
+ background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+
 h1{
-  
-    text-align:center;
     font-weight:200;
     letter-spacing:1px;
 font-size: 50px;
 }
+`
+export const StyledLeaf = styled.img`
+      position:absolute;
+      width:70px;
+      right:0;
 `
 export const Container = styled.div`
 background:${Styles.PrimaryBlue};
@@ -28,7 +43,20 @@ font-size: 24px;
 div{
     p{
         font-weight: 600;
-font-size: 36px;
+font-size: 28px;
+margin:5px 0 0 20px;
     }
 }
+`
+export const SectionDiv = styled.div`
+display:flex;
+margin:30px 0 30px 0;
+`
+export const StyledNoCars=styled.img`
+opacity:70%;
+width:50px;
+`
+export const StyledThankYou=styled.img`
+width:50px;
+height:50px;
 `

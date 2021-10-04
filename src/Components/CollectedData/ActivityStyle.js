@@ -1,9 +1,15 @@
 import styled from "styled-components"
 import {Styles} from '../../Styles/GlobalStyling'
 import {IoIosArrowUp} from'react-icons/io'
+import FootPrintsOpacity from "../../Images/FootPrintsOpacity.png"
+import Street from "../../Images/Street.png"
 
 
 export const Wrapper = styled.div`
+ background-image: url(${FootPrintsOpacity});
+ background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
 margin-bottom:60px;
 h3{
     display:flex;
@@ -16,6 +22,7 @@ line-height: 48px;
 }
 `
 export const StyledUL = styled.ul`
+
 padding:0;
     display:flex;
     flex-direction:column;
@@ -101,6 +108,11 @@ color:${Styles.ColorBlack};
 
 export const ModalContainer = styled.div`
 background: rgba(129, 210, 239, 0.6);
+ background-image: url(${Street});
+ background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+
 box-shadow: 2px 4px 4px rgba(0, 0, 0, 0.25);
 border-radius: 55px;
 width: 318.21px;
@@ -134,4 +146,9 @@ h4{
 font-size: 55px;
 text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
+`
+export const StyledLeaf = styled.img`
+margin:0 0 0 25px;
+position:absolute;
+width:70px;
 `

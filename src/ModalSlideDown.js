@@ -36,7 +36,7 @@ const ModalBox = styled(motion.div)`
   max-height: 100vh;
   overflow-y: auto;
   width:60%;
-  background-color: white;
+  background-color: #D8D1D6;
   overflow-y: auto;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
   z-index: 1999;
@@ -58,89 +58,10 @@ cursor:pointer;
 }
 `
 const Content = styled.div`
-text-align:center;
-
-
+/* text-align:center; */
 `
 
-export const ModalH2 = styled.h2`
-font-size:40px;
-letter-spacing:1.5px;
-margin:40px 0 0 0;
-color:#1B4D4A;
-`
-export const ModalDiv = styled.div`
-margin:0;
-width:100%;
 
-  div{
-    display:flex;
-  flex-direction:column;
-  align-items:center;
-  h5{
-    font-size:24px;
-margin:15px 0 10px 0;
-color:#292929;
-font-weight:400;
-max-width:550px;
-text-align:center;
-  }
-}
-p{
-min-width:650px;
-font-size:16px;
-color:#292929;
- line-height:24px;
- font-weight:400;
- @media screen and (max-width:1300px) {
-  min-width:450px;
-}
- @media screen and (max-width:960px) {
-  min-width:0px;
-}
-}
-p > span{
-  color:#292929;
-}
-h6{
- max-width:750px;
- line-height:24px;
-  font-size:16px;
-  font-weight:600;
-}
-@media screen and (max-width:960px) {
-
-}
-`
-export const ModalButton = styled.button`
-margin:45px 0 0 0;
-position:absolute;
-bottom:10%;
-width:200px;
-    color:#FFFFFF;
-    position:relative;
-    border: 1px solid #1B4D4A;
-box-sizing: border-box;
-background:#1B4D4A;
-padding:10px;
-font-size:16px;
-letter-spacing:2px;
-cursor:pointer;
-&:hover{
-    color: #1B4D4A;
-    background:#B2BFBE;
-}
-&:active{
-    transform: scale(0.98);
-}
-@media screen and (max-width:900px) {
-    margin:20px 0 0 0;
-}
-@media screen and (max-width:500px) {
-    padding:7px;
-font-size:12px;
-}
-`
 const portalRoot = document.getElementById('portal-root');
 
 const ModalSlideDown = ({ modalOpen, children, onClose }) => {

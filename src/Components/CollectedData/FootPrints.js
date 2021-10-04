@@ -31,7 +31,7 @@ const FootPrints = ({setFootPrint, setAllSteps}) => {
             setFootPrint(sumStepsGram)
            })
 
-
+//Effecting the ice
     return (
         <div>
             {/* <h1>Footprint</h1> */}

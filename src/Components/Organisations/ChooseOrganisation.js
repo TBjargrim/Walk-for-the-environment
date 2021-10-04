@@ -33,7 +33,6 @@ useEffect(()=>{
         <>
         <StyledH3>Dina poäng</StyledH3>
         <Wrapper>
-         
             <WrapperYourPoints>
             <Coins/> 
             <p>{sumPoints} p = {sumPoints} kr </p> 

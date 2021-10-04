@@ -36,7 +36,7 @@ const ModalBox = styled(motion.div)`
   max-height: 100vh;
   overflow-y: auto;
   width:60%;
-  background-color: white;
+  background-color: #D8D1D6;
   overflow-y: auto;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
   z-index: 1999;

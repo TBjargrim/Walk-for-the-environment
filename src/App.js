@@ -10,11 +10,15 @@ import  {useDarkMode} from './DarkLightMode/useDarkMode'
 import { lightTheme, darkTheme } from './DarkLightMode/Themes'
 import {ThemeProvider} from "styled-components"
 import {GlobalStyles} from './Styles/GlobalStyling'
+
+import Landing from './Components/Landing/Landing';
 import YourActivity from './Components/CollectedData/YourActivity';
 import ChooseOrganisation from './Components/Organisations/ChooseOrganisation';
 import ThankYou from './Components/ThankYou/ThankYou';
 import InfoOrganisation from './Components/Organisations/InfoOrganisation';
 import {pastActivity} from './Data/PastActivity'
+import SignIn from './Components/SignInSignUp/SignIn';
+import SignUp from './Components/SignInSignUp/SignUp';
 
 function App() {
   const [theme, themeToggler] = useDarkMode();
@@ -29,6 +33,10 @@ const [allSteps, setAllSteps] = useState();
 const [counter, setCounter] = useState(9000);
 
 const [footPrint, setFootPrint] = useState();
+
+const [name, setName] =useState('');
+const [userName, setUserName] = useState('');
+const [password, setPassword] = useState('');
 
 if (viewWizzard === 'viewed'){
   //save it localStorage
@@ -61,11 +69,19 @@ useEffect(()=>{
       <Toggle theme={theme} toggleTheme={themeToggler} /> 
       <Switch>
       <Route exact path='/'> 
-      <StepWizzard 
-/> 
+ <Landing />
       </Route>
-
-      <Route path='/stepcounter'> <StepCounter 
+      <Route path='/signin'> 
+ <SignIn setUserName={setUserName} userName={userName} setPassword={setPassword} password={password}/>
+      </Route>
+      <Route path='/signup'> 
+ <SignUp name ={name} setName={setName} setUserName={setUserName} userName={userName} setPassword={setPassword} password={password} />
+      </Route>
+<Route path='/wizzard'>
+<StepWizzard 
+/>
+</Route>
+      <Route path='/home'> <StepCounter 
       points={points}
       setPoints={setPoints}
             setViewWizzard={setViewWizzard} 

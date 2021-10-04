@@ -1,8 +1,8 @@
 import React,{children, useEffect} from 'react'
 import ModalSlideUP from '../../ModalSlideUp'
 import {pastActivity} from '../../Data/PastActivity'
-
-import {Wrapper, StyledUL, ResultButton, Arrow, ModalContainer} from './ActivityStyle'
+import Leaf from '../../Images/Leaf.png'
+import {Wrapper, StyledUL, ResultButton, Arrow, ModalContainer, StyledLeaf} from './ActivityStyle'
 
 const YourActivity = ({allSteps,setAllSteps,sumPoints,setSumPoints,counter, setModalOpen, modalOpen, points, setPoints, currentMonth, date}) => {
 
@@ -100,8 +100,9 @@ initialValue.map((day) =>{
       <h5>{allSteps} steg</h5>
       <p>Detta resulterar i <br/> {sumPoints} poäng <br/>och</p>
 <h4>{sumPoints} kr</h4>
+<StyledLeaf src={Leaf}/>
 <p>att donera till din valda <br/>organisation</p>
- </ModalContainer>
+</ModalContainer>
             </ModalSlideUP>
         </Wrapper>
     )

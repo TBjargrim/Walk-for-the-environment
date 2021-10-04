@@ -1,16 +1,19 @@
 import React, {useState} from 'react'
 import {Link} from 'react-router-dom'
-import Landing from './Landing';
 import InfoOne from './InfoOne';
 import InfoTwo from './InfoTwo';
 import InfoThree from './InfoThree';
 
-const StepWizzard = ({setViewWizzard}) => {
+import {TopDiv, WizzardWrapper, ButtonsArrow, DivButton,Front, Back, Check} from './StyledWizzard'
+import FilledCircel from '../../Images/FilledCircel.png'
+import Circel from '../../Images/Circel.png'
+import { Buttons } from '../../Styles/GlobalStyling';
+
+const StepWizzard = () => {
     const [steps, setSteps] = useState([
-        { key: 'landing', label: 'Landing', isDone: true, component: Landing },
-        { key: 'firstStep', label: 'My first Step', isDone: false, component: InfoOne },
-        { key: 'secondStep', label: 'My second Step', isDone: false, component: InfoTwo },
-        { key: 'finalStep', label: 'My Final Step', isDone: false, component: InfoThree },
+        { key: 'firstStep', label: 'Minska klimatavtryck', isDone: true, component: InfoOne },
+        { key: 'secondStep', label: 'Registrera steg', isDone: false, component: InfoTwo },
+        { key: 'finalStep', label: 'Små förändringar', isDone: false, component: InfoThree },
       ]);
       const [activeStep, setActiveStep] = useState(steps[0]);
 
@@ -41,30 +44,34 @@ const StepWizzard = ({setViewWizzard}) => {
 
 
     return (
-        <div>
-{/* <ul>
+        <TopDiv>
+<ul>
     {steps.map((step, i) =>{
 return <li
 key={i}
 >
-    {activeStep.key === step.key ? <div> <p>Steg {i+1}</p><p>{step.label}</p> </div>: <div></div>}
+    {activeStep.key === step.key ? <div><img src={FilledCircel} /></div>: <div><img src={Circel} /></div>}
 
 </li>
 
     })}
-</ul> */}
+</ul>
 
-<div>
+<WizzardWrapper>
+    <div>
     {activeStep.component()}
-</div>
-<div>
-    <button onClick={handleBack} disabled={steps[0].key===activeStep.key}>Back</button>
-    <button onClick={handleNext}>{steps[steps.length - 1].key !== activeStep.key ? 'Next' : <div>
-        <Link to='/stepcounter'>I get it</Link>
+    </div>
+
+<DivButton>
+    <ButtonsArrow onClick={handleBack} disabled={steps[0].key===activeStep.key}><Back/></ButtonsArrow>
+    <ButtonsArrow onClick={handleNext}>{steps[steps.length - 1].key !== activeStep.key ? <Front/> : <div>
+        <Link to='/home'><Check/></Link>
        </div>}
-    </button>
-</div>
-        </div>
+    </ButtonsArrow>
+</DivButton>
+</WizzardWrapper>
+        </TopDiv>
+  
     )
 }
 

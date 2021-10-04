@@ -3,7 +3,10 @@ import {Link} from 'react-router-dom'
 import ModalSlideDown from '../../ModalSlideDown';
 
 import Count from './Count'
-import {StepWrapper, InfoButton, DateDiv, ButtonStyle, ButtonDiv, DayCoins} from './StylingStep'
+import NoCars from '../../Images/NoCars.png'
+import FootPrintCircel from '../../Images/FootPrintCircel.png'
+import CoinsCircel from '../../Images/CoinsCircel.png'
+import {StepWrapper, InfoButton, DateDiv, ButtonStyle, ButtonDiv, DayCoins, NoCarsDiv, ModalSlideDownWrapper} from './StylingStep'
 const StepCounter = ( {currentDay,counter,setCounter, modalOpen, setModalOpen, points, setPoints, currentMonth, date}) => {
     
 
@@ -28,14 +31,24 @@ useEffect(() =>{
             <ButtonDiv>
             <ButtonStyle><Link to='/activity'><DayCoins/>{points} poäng</Link></ButtonStyle>
 
-            <ButtonStyle>Dina minskade utsläpp</ButtonStyle>
+            <ButtonStyle>
+                <NoCarsDiv>
+                <img src={NoCars}/>
+                </NoCarsDiv>
+                Dina minskade utsläpp</ButtonStyle>
 </ButtonDiv>
                     <ModalSlideDown modalOpen={modalOpen} onClose={() => setModalOpen(false)} children={children}>
-                        <h2>Hur funkar Gå För Miljön?</h2>
-                        <p>Att välja att gå istället för många andra färdsätt så bevarar du naturen.
-                        Med denna app kan du hjälpa på flera sätt genom att även donera till organisationer utan att öppna plånboken alls.</p>
-                        <p>För varje 1000 steg du tar ger dig 1 poäng som motsvarar 1 krona.  Max 20 000 steg per dag.</p>
-                        <p>Du kan donera till tre olika  organstioner som främjar klimatet. </p>
+                        <ModalSlideDownWrapper>
+                        <h2>Hur funkar <br/>Gå För Miljön?</h2>
+                        <h5>Att välja att gå istället för många andra färdsätt så bevarar du naturen.
+                        <br/>Med denna app kan du hjälpa på flera sätt genom att även donera till organisationer utan att öppna plånboken.</h5>
+                        <div>
+                        <img src={FootPrintCircel} alt='Footprints'/><p>För varje 1000 steg du tar ger dig 1 poäng som motsvarar 1 krona. Max 20 000 steg per dag.</p>
+                        </div>
+                        <div>
+                        <img src={CoinsCircel} alt='Coins'/> <p>Du kan donera till tre olika  organstioner som främjar klimatet. </p>
+            </div>
+            </ModalSlideDownWrapper>
             </ModalSlideDown>
         </StepWrapper>
  
