@@ -131,3 +131,44 @@ font-size: 12px;
     }
 }
 `
+export const ModalSlideDownWrapper2 = styled.div`
+
+/* margin:0 0 100px 0; */
+text-align:center;
+h2{
+    margin:30px 0 0 0;
+    font-weight: 600;
+font-size: 22px;
+font-size: 24px;
+}
+h3{
+    font-weight: 600;
+font-size: 24px;
+}
+    p{
+        font-weight: 600;
+font-size: 12px;
+
+    }
+
+`
+export const ImgIceBears = styled.div`
+margin:70px 0 0 0;
+display:flex;
+justify-content:flex-end;
+width:100%;
+img{
+    width:250px;
+}
+
+`
+export const ImgLines = styled.div`
+margin:20px 0 0 0;
+display:flex;
+justify-content:flex-end;
+width:100%;
+img{
+    width:200px;
+}
+
+`

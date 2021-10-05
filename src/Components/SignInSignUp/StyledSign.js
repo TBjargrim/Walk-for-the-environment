@@ -3,6 +3,7 @@ import {Styles} from '../../Styles/GlobalStyling'
 
 export const WrapperSign = styled.div`
 width:100%;
+overflow-y:hidden;
 h4{
     text-align:center;
 font-weight: 200;

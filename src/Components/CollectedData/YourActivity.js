@@ -1,5 +1,6 @@
 import React,{children, useEffect} from 'react'
 import ModalSlideUP from '../../ModalSlideUp'
+import Navbar from '../../Navbars/Navbar';
 import {pastActivity} from '../../Data/PastActivity'
 import Leaf from '../../Images/Leaf.png'
 import {Wrapper, StyledUL, ResultButton, Arrow, ModalContainer, StyledLeaf} from './ActivityStyle'
@@ -104,6 +105,7 @@ initialValue.map((day) =>{
 <p>att donera till din valda <br/>organisation</p>
 </ModalContainer>
             </ModalSlideUP>
+            <Navbar/>
         </Wrapper>
     )
 }

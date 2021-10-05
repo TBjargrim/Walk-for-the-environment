@@ -1,6 +1,7 @@
 import React,{useEffect} from 'react'
 import {Organisations} from '../../Data/Organisations'
 import History from '../History'
+import Navbar from '../../Navbars/Navbar';
 
 import {Wrapper, StyledH3, StyledUL, LogoDiv, StyledButton, WrapperYourPoints, Coins} from './StylingChooseOrganisations'
 const ChooseOrganisation = ({sumPoints, setSumPoints}) => {
@@ -48,6 +49,7 @@ useEffect(()=>{
                 )
             )}
             </StyledUL>
+            <Navbar/>
         </Wrapper>
         </>
     )

@@ -13,10 +13,6 @@ const SignIn = ({setUserName, userName, setPassword, password}) => {
         window.localStorage.setItem('personalDetails', JSON.stringify(personalDetails))
     }
 
-    // useEffect( () =>{
-
-
-    // }, [submitValue]) 
     return (
         <WrapperSign>
             <h4>Logga in </h4>

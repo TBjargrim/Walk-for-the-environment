@@ -1,13 +1,21 @@
 import React,{useEffect, children} from 'react'
 import {Link} from 'react-router-dom'
 import ModalSlideDown from '../../ModalSlideDown';
+import ModalSlideDown2 from '../../ModalSlideDown2';
+import Navbar from '../../Navbars/Navbar';
 
 import Count from './Count'
 import NoCars from '../../Images/NoCars.png'
 import FootPrintCircel from '../../Images/FootPrintCircel.png'
 import CoinsCircel from '../../Images/CoinsCircel.png'
-import {StepWrapper, InfoButton, DateDiv, ButtonStyle, ButtonDiv, DayCoins, NoCarsDiv, ModalSlideDownWrapper} from './StylingStep'
-const StepCounter = ( {currentDay,counter,setCounter, modalOpen, setModalOpen, points, setPoints, currentMonth, date}) => {
+
+import Line from '../../Images/Line.png'
+import IceBear from '../../Images/IceBears.png'
+
+import {StepWrapper, InfoButton, DateDiv, ButtonStyle, ButtonDiv, DayCoins, NoCarsDiv, ModalSlideDownWrapper,ModalSlideDownWrapper2, ImgIceBears, ImgLines } from './StylingStep'
+
+
+const StepCounter = ( {ice, footPrint,currentDay,counter,setCounter, modalOpen,modalOpen2, setModalOpen,setModalOpen2, points, setPoints, currentMonth, date}) => {
     
 
 useEffect(() =>{
@@ -31,12 +39,31 @@ useEffect(() =>{
             <ButtonDiv>
             <ButtonStyle><Link to='/activity'><DayCoins/>{points} poäng</Link></ButtonStyle>
 
-            <ButtonStyle>
+            <ButtonStyle onClick={() => {
+            setModalOpen2(true)}}>
                 <NoCarsDiv>
                 <img src={NoCars}/>
                 </NoCarsDiv>
                 Dina minskade utsläpp</ButtonStyle>
 </ButtonDiv>
+<ModalSlideDown2 modalOpen2={modalOpen2} onClose={() => setModalOpen2(false)} children={children}>
+<ModalSlideDownWrapper2>
+    <h2>Vad du har gjort för <br/> miljön idag?</h2>
+    <ImgLines>
+    <img src={Line} alt='pink line'/>
+    </ImgLines>
+<p>För att du har valt att gå istället <br/>
+för att ta bilen <br/>
+så har du minskat dina <br/>
+utsläpp med:</p>
+<h3>{footPrint} g CO2</h3>
+<p>vilket har resulterat i att du <br/>
+räddat </p>
+<h3>{ice} m2</h3>
+<p>is ifrån att smälta</p>
+<ImgIceBears> <img src={IceBear} alt='Icebears walking'/></ImgIceBears>
+</ModalSlideDownWrapper2>
+</ModalSlideDown2>
                     <ModalSlideDown modalOpen={modalOpen} onClose={() => setModalOpen(false)} children={children}>
                         <ModalSlideDownWrapper>
                         <h2>Hur funkar <br/>Gå För Miljön?</h2>
@@ -50,6 +77,7 @@ useEffect(() =>{
             </div>
             </ModalSlideDownWrapper>
             </ModalSlideDown>
+            <Navbar/>
         </StepWrapper>
  
     )
