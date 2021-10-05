@@ -5,6 +5,15 @@ display:flex;
 flex-direction:column;
 align-items:center;
 text-align:center;
+img{
+    width:500px;
+    border-radius: 40px;
+    @media screen and (max-width: 800px) {
+    width:200px;
+    border-radius: 40px;
+}
+}
+
 `
 export const Button = styled.button `
 background:${Buttons.Background};

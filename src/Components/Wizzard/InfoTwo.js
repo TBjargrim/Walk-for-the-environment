@@ -1,6 +1,7 @@
 import React from 'react'
 
 import WizzardTwo from '../../Images/WizzardTwo.png'
+
 const InfoTwo = () => {
     return (
         <div>

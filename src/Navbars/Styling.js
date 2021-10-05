@@ -9,7 +9,7 @@ import {FaCoins} from 'react-icons/fa'
 export const Wrapper = styled.div`
 display:flex;
 background:${({ theme }) => theme.body};
-justify-content:space-between;
+justify-content:space-evenly;
 align-items:center;
 height:60px; 
 clear: both;
@@ -22,7 +22,9 @@ clear: both;
         a{
         margin:0 35px 0 35px;
     }
-
+    @media screen and (max-width: 800px) {
+        justify-content:space-between;
+}
 `
 export const StyledNavLink = styled(NavLink)`
  margin:0 35px 0 35px;

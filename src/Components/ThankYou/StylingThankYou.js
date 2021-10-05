@@ -3,7 +3,7 @@ import Park from '../../Images/Park.png'
 import {Styles} from '../../Styles/GlobalStyling'
 
 export const Wrapper = styled.div`
-height:100vh;
+height:90vh;
 width:100%;
 display:flex;
 padding:30px 0 0 0;
@@ -17,13 +17,25 @@ background-image: url(${Park});
 h1{
     font-weight:200;
     letter-spacing:1px;
+font-size: 64px;
+margin:50px 0 50px 0;
+    @media screen and (max-width: 800px) {
 font-size: 50px;
+margin:30px 0 30px 0;
+}
+
 }
 `
 export const StyledLeaf = styled.img`
-      position:absolute;
+       position:absolute;
+       width:90px;
+       right:50%;
+    @media screen and (max-width: 800px) {
+ 
       width:70px;
       right:0;
+}
+
 `
 export const Container = styled.div`
 background:${Styles.PrimaryBlue};

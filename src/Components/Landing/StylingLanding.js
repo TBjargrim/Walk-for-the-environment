@@ -1,16 +1,21 @@
 import styled from 'styled-components'
 import {Styles} from '../../Styles/GlobalStyling'
 export const LandingWrapper = styled.div`
-height:100vh;
+width:100%;
+display:flex;
+flex-direction:column;
+align-items:center;
+margin:50px 0 0 0;
+@media screen and (max-width: 900px) {
+overflow-y:hidden;
 div{
     display:flex;
     justify-content:center;
     width:100%;
-    margin:50px 0 0 0;
     img{
         width:90%;
     }
-  
+}
 }
 `
 export const StyledButtons = styled.div`

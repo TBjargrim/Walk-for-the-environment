@@ -32,6 +32,7 @@ useEffect(() =>{
             <InfoButton onClick={() => {
             setModalOpen(true)}}>i</InfoButton>
             <DateDiv>
+
             <p>Idag</p>
             <h5>{currentDay} {date} {currentMonth}</h5>
             </DateDiv>

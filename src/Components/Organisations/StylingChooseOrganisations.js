@@ -12,11 +12,20 @@ justify-content:center;
 align-items:center;
 `
 export const StyledH3 = styled.h3`
-align-items:left;
-    margin: 50px 0 30px 30px;
+    display:flex;
+    justify-content:center;
+    margin:70px 0 50px 0;
     font-style: normal;
 font-weight: 500;
-font-size: 32px;`
+font-size: 40px;
+line-height: 48px;
+@media screen and (max-width: 800px) {
+  display:flex;
+    justify-content:flex-start;
+    margin: 20px 0 30px 30px;
+    font-size: 32px;
+}
+`
 
 export const WrapperYourPoints = styled.div`
 background:${Styles.ColorWhite};

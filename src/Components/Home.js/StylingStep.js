@@ -11,7 +11,7 @@ export const InfoButton = styled.button`
 width:25px;
 height:25px;
 position:absolute;
-right:5%;
+right:25%;
 background: #EEEAED;
 border: 1px solid #A79CA3;
 box-sizing: border-box;
@@ -19,19 +19,34 @@ border-radius:50%;
 font-weight:bold;
 font-size:18px;
 color:${Styles.PrimaryBlue};
+cursor:pointer;
+@media screen and (max-width: 800px) {
+right:5%;
+}
 `
 export const DateDiv = styled.div`
-
+text-align:center;
 p{
-    margin:30px 0 10px 0;;
+    margin:100px 0 10px 0;
     color:${Styles.PrimaryPink};
     font-weight: 600;
-font-size: 22px;
+font-size: 28px;
+@media screen and (max-width: 800px) {
+    margin:0 0 10px 20px;
+    font-size: 22px;
+}
 }
 h5{
-    margin:0;
+    margin:0 0 20px 0;
     font-weight: 500;
-font-size: 32px;
+font-size: 40px;
+@media screen and (max-width: 800px) {
+    margin:0 0 0 20px;
+    font-size: 32px;
+}
+}
+@media screen and (max-width: 800px) {
+    text-align:left;
 }
 `
 export const ButtonDiv = styled.div`
@@ -53,8 +68,14 @@ margin:10px;
 font-weight: normal;
 font-size: 16px;
 color:${Styles.ColorBlack};
+cursor:pointer;
 a{
     text-decoration:none;
+}
+@media screen and (max-width: 900px) {
+    width: 160px;
+height: 45px;
+font-size: 12px;
 }
 `
 export const DayCoins = styled(FaCoins)`

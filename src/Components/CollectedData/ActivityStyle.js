@@ -13,12 +13,17 @@ export const Wrapper = styled.div`
 margin-bottom:60px;
 h3{
     display:flex;
-    justify-content:flex-start;
-    margin: 50px 0 70px 30px;
+    justify-content:center;
+    margin: 20px 0 70px 20px;
     font-style: normal;
 font-weight: 500;
-font-size: 32px;
+font-size: 40px;
 line-height: 48px;
+@media screen and (max-width: 800px) {
+  display:flex;
+    justify-content:flex-start;
+    font-size: 32px;
+}
 }
 `
 export const StyledUL = styled.ul`
