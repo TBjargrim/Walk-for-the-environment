@@ -4,10 +4,10 @@ import {Styles} from '../../Styles/GlobalStyling'
 export const WrapperSign = styled.div`
 width:100%;
 overflow-y:hidden;
-h4{
-    text-align:center;
-font-weight: 200;
-font-size: 50px;
+form{
+    display:flex;
+flex-direction:column;
+align-items:center;
 }
 p{
     text-align:center;
@@ -24,10 +24,10 @@ p> span{
     font-weight:600;
 }
 `
-export const StyledInputButton = styled.div`
-display:flex;
-flex-direction:column;
-align-items:center;
+export const StyledH2=styled.h2`
+font-weight: 200;
+font-size: 50px;
+text-align:center;
 `
 export const InputField = styled.input`
 margin:10px 0 0 0;

@@ -5,7 +5,7 @@ import Leaf from '../../Images/Leaf.png'
 import ThankYouImg from '../../Images/ThankYouPink.png'
 import NoCars from '../../Images/NoCars.png'
 
-import{Wrapper, Container, StyledThankYou, SectionDiv,StyledNoCars, StyledLeaf} from './StylingThankYou'
+import{Wrapper, HeaderDiv, Container, StyledThankYou, SectionDiv,StyledNoCars, StyledLeaf} from './StylingThankYou'
 const ThankYou = ({sumPoints, footPrint }) => {
     
     const getName = localStorage.getItem('personalDetails');
@@ -14,8 +14,11 @@ const ThankYou = ({sumPoints, footPrint }) => {
     const personName = saveName.Name;
     return (
         <Wrapper>
-            <StyledLeaf src={Leaf} alt='Leaf'/>
+            <HeaderDiv>
+      
             <h1>Gå för miljön</h1>
+            <StyledLeaf src={Leaf} alt='Leaf'/>
+            </HeaderDiv>
             <Container>
             <h2>Tack {personName}!</h2>
             <h3>Alla hjältar bär inte mantel</h3>
