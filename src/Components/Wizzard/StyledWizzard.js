@@ -86,7 +86,6 @@ width:50px;
 height:50px;
 border:none;
 `
-
 export const Front = styled(MdKeyboardArrowRight)`
 color:${Styles.ColorWhite};
 font-size:24px;

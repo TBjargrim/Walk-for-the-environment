@@ -18,6 +18,7 @@ import InfoOrganisation from './Components/Organisations/InfoOrganisation';
 import {pastActivity} from './Data/PastActivity'
 import SignIn from './Components/SignInSignUp/SignIn';
 import SignUp from './Components/SignInSignUp/SignUp';
+import AccountPage from './Components/Account/AccountPage';
 
 function App() {
   const [theme, themeToggler] = useDarkMode();
@@ -130,6 +131,7 @@ useEffect(()=>{
 </Route>
 <Route path='/organisations/:organisation' component={InfoOrganisation}/> 
 <Route path='/organisations'> <ChooseOrganisation sumPoints={sumPoints} setSumPoints={setSumPoints}/> </Route>
+<Route path='/account'> <AccountPage theme={theme} toggleTheme={themeToggler}/> </Route>
 
 <Route path='/thankyou'> <ThankYou sumPoints={sumPoints} footPrint={footPrint} setFootPrint={setFootPrint} setSumPoints={setSumPoints} ice={ice} setIce={setIce}/> </Route>
       </Switch>

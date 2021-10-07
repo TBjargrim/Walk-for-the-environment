@@ -14,28 +14,32 @@ background-image: url(${Park});
   background-attachment: fixed;
   background-position: center;
 
+
+
+
+`
+export const HeaderDiv = styled.div`
+display:flex;
+justify-content:center;
+
 h1{
     font-weight:200;
     letter-spacing:1px;
 font-size: 64px;
-margin:50px 0 50px 0;
+margin:50px 0 50px 100px;
     @media screen and (max-width: 800px) {
-font-size: 50px;
-margin:30px 0 30px 0;
+font-size: 40px;
+margin:30px 0 30px 30px;
 }
-
 }
 `
 export const StyledLeaf = styled.img`
-       position:absolute;
-       width:90px;
-       right:50%;
+       width:100px;
+       height:100px;
     @media screen and (max-width: 800px) {
- 
-      width:70px;
-      right:0;
+      width:50px;
+      height:50px;
 }
-
 `
 export const Container = styled.div`
 background:${Styles.PrimaryBlue};
