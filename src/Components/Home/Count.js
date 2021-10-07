@@ -7,9 +7,9 @@ import {ImageDiv, CountWrapper, ProgressBar} from './StylingStep'
 
 import FootPrints from '../../Images/FootPrints.png'
 
-const Count = ({counter, setCounter, points, setPoints}) => {
+const Count = ({counter, setCounter}) => {
 const end = 20000;
-
+   
     useEffect((counter) => {
         const timer = setInterval(() => {
         setCounter(prevCount => prevCount + 1);

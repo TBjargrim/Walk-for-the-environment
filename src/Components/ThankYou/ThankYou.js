@@ -1,4 +1,5 @@
-import React from 'react'
+import React, { useEffect } from 'react'
+import { Link } from 'react-router-dom'
 import FootPrints from '../CollectedData/FootPrints'
 import Navbar from '../../Navbars/Navbar';
 import Leaf from '../../Images/Leaf.png'
@@ -6,12 +7,21 @@ import ThankYouImg from '../../Images/ThankYouPink.png'
 import NoCars from '../../Images/NoCars.png'
 
 import{Wrapper, Container, StyledThankYou, SectionDiv,StyledNoCars, StyledLeaf} from './StylingThankYou'
-const ThankYou = ({sumPoints, footPrint }) => {
+const ThankYou = ({sumPoints, footPrint, allActivity, setAllActivity }) => {
     
     const getName = localStorage.getItem('personalDetails');
     const saveName = JSON.parse(getName)
 
     const personName = saveName.Name;
+
+  
+        const handleClick = () =>{
+            setAllActivity()
+        }
+
+ 
+
+
     return (
         <Wrapper>
             <StyledLeaf src={Leaf} alt='Leaf'/>
@@ -27,7 +37,8 @@ const ThankYou = ({sumPoints, footPrint }) => {
               <StyledNoCars src={NoCars} alt='No Driving'/> <p>: - {footPrint} g C02</p>
             </SectionDiv>
             </Container>
-            <Navbar/>
+          <button onClick={handleClick}><Link to='/home'>Tillbaka</Link></button>
+         
         </Wrapper>
     )
 }

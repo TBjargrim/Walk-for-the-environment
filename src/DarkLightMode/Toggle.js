@@ -10,31 +10,40 @@ const ThemeDiv =styled.div`
 width:100%;
 display:flex;
 justify-content:center;
+padding:30px 0 30px 0;
+border: 2px solid rgba(167, 156, 163, 0.1); 
+p{
+    font-weight: 500;
+font-size: 18px;
+}
 `
 const ThemeButton = styled.button`
+margin: 0 0 0 15px;
 padding:2px 0 0 0;
 border-radius:50%;
 background: #EEEAED;
 border: 1px solid #A79CA3;
 box-sizing: border-box;
-width:25px;
-height:25px;
-font-size:16px;
+width:35px;
+height:35px;
+font-size:24px;
 color:${Styles.PrimaryPink};
 `
 
-const Toggle = ({theme,  toggleTheme }) => {
+const Toggle = ({theme,  themeToggler }) => {
 
     return (
         <ThemeDiv>
-        <ThemeButton onClick={toggleTheme}>
-        {theme === 'light' ? <HiOutlineMoon/> :<HiOutlineSun/>}
-        </ThemeButton>
-        </ThemeDiv>
+        {theme === 'light' ? <p>Ändra till darkmode:</p> :<p>Ändra till lightmode : </p>}
+    <ThemeButton onClick={themeToggler}>
+    {theme === 'light' ? <HiOutlineMoon/> :<HiOutlineSun/>}
+    </ThemeButton>
+    </ThemeDiv>
+
     );
 };
 Toggle.propTypes = {
     theme: string.isRequired,
-    toggleTheme: func.isRequired,
+    themeToggler: func.isRequired,
 }
 export default Toggle;

@@ -1,10 +1,10 @@
 import React,{useState, useEffect} from 'react'
 import {Router, Route, Switch} from 'react-router-dom'
 
-import StepCounter from './Components/Home.js/Stepcounter';
+import StepCounter from './Components/Home/Stepcounter';
 import StepWizzard from './Components/Wizzard/StepWizzard'
 import history from './Components/History'
-import Toggle from './DarkLightMode/Toggle'
+
 import  {useDarkMode} from './DarkLightMode/useDarkMode'
 import { lightTheme, darkTheme } from './DarkLightMode/Themes'
 import {ThemeProvider} from "styled-components"
@@ -22,19 +22,22 @@ import AccountPage from './Components/Account/AccountPage';
 
 function App() {
   const [theme, themeToggler] = useDarkMode();
-
 const themeMode = theme === 'light' ? lightTheme : darkTheme;
+
 const [modalOpen, setModalOpen] = useState(false);
 const [modalOpen2, setModalOpen2] = useState(false);
 
 const [points, setPoints] = useState(9);
 const [sumPoints, setSumPoints] = useState(0);
 
+const [allActivity, setAllActivity] = useState(JSON.parse(localStorage.getItem('allActivity')) || []);
+
 const [allSteps, setAllSteps] = useState();
 const [counter, setCounter] = useState(9000);
 
 const [footPrint, setFootPrint] = useState();
 const [ice, setIce] =useState();
+
 const [name, setName] =useState('');
 const [userName, setUserName] = useState('');
 const [password, setPassword] = useState('');
@@ -83,7 +86,7 @@ useEffect(()=>{
     <ThemeProvider theme={themeMode}>
     <GlobalStyles/>
     <div>
-      <Toggle theme={theme} toggleTheme={themeToggler} /> 
+
       <Switch>
       <Route exact path='/'> 
  <Landing />
@@ -127,13 +130,15 @@ useEffect(()=>{
       counter={counter}
       setCounter={setCounter}
       allSteps={allSteps}
-      setAllSteps={setAllSteps}/> 
+      setAllSteps={setAllSteps}
+      allActivity={allActivity}
+      setAllActivity={setAllActivity}/> 
 </Route>
 <Route path='/organisations/:organisation' component={InfoOrganisation}/> 
 <Route path='/organisations'> <ChooseOrganisation sumPoints={sumPoints} setSumPoints={setSumPoints}/> </Route>
-<Route path='/account'> <AccountPage theme={theme} toggleTheme={themeToggler}/> </Route>
+<Route path='/account'> <AccountPage theme={theme} themeToggler={themeToggler}/> </Route>
 
-<Route path='/thankyou'> <ThankYou sumPoints={sumPoints} footPrint={footPrint} setFootPrint={setFootPrint} setSumPoints={setSumPoints} ice={ice} setIce={setIce}/> </Route>
+<Route path='/thankyou'> <ThankYou sumPoints={sumPoints} footPrint={footPrint} setAllActivity={setAllActivity} allActivity={allActivity} /> </Route>
       </Switch>
    
     </div>

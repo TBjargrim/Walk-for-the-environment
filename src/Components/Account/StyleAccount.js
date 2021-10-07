@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-
+import {Styles} from  '../../Styles/GlobalStyling'
 export const WrapperAccount = styled.div`
 
 h3{
@@ -24,5 +24,15 @@ justify-content:center;
 }
 `
 export const SignOutButton = styled.button`
-
+margin:50px 0 40px 0;
+width:170px;
+background: linear-gradient(180deg, #358CAB 0%, #92C8FA 100%);
+box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+border-radius: 25px;
+border:none;
+height: 40px;
+font-size: 18px;
+letter-spacing:1px;
+color:${Styles.ColorWhite};
+cursor:pointer;
 `

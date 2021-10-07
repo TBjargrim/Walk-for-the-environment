@@ -1,12 +1,15 @@
-import React,{children, useEffect} from 'react'
+import React,{children, useState, useEffect} from 'react'
 import ModalSlideUP from '../../ModalSlideUp'
 import Navbar from '../../Navbars/Navbar';
 import {pastActivity} from '../../Data/PastActivity'
 import Leaf from '../../Images/Leaf.png'
 import {Wrapper, StyledUL, ResultButton, Arrow, ModalContainer, StyledLeaf} from './ActivityStyle'
 
-const YourActivity = ({allSteps,setAllSteps,sumPoints,setSumPoints,counter, setModalOpen, modalOpen, points, setPoints, currentMonth, date}) => {
+const YourActivity = ({allSteps,setAllSteps,sumPoints,setSumPoints,counter, setModalOpen, modalOpen, points, currentMonth, date, allActivity, setAllActivity}) => {
 
+
+
+useEffect(()=>{
     if(pastActivity[0].date !== date){
         pastActivity.unshift(
             {
@@ -16,64 +19,39 @@ const YourActivity = ({allSteps,setAllSteps,sumPoints,setSumPoints,counter, setM
                 steps:counter,
                 points:points,
              })
-            
+             setAllActivity([...pastActivity ])
             }
 
-useEffect(()=>{
 let sumP= 0;
 let sumSteps= 0;
 let arrPoints = []
 let arrSteps = []
 
-const saved = localStorage.getItem('allActivity');
-const initialValue = JSON.parse(saved);
-
-initialValue.map((day) =>{
+allActivity && allActivity.map((day) =>{
     let allP = day.points
     let allS = day.steps
      arrPoints.push(allP)
      arrSteps.push(allS)
 
-    })
+    }) 
+
     for(let i = 0; i < arrPoints.length; i++){
         sumP += arrPoints[i]
         }
     for(let j = 0; j < arrSteps.length; j++){
         sumSteps += arrSteps[j]
-        }
-
-     
+        }   
 setSumPoints(sumP)
 setAllSteps(sumSteps)
 }, [])
 
-useEffect(() =>{
-    let num = counter.toString()
- num =num.slice(0,-3);
- num =parseInt(num)
-setPoints(num)
-
-const saved = localStorage.getItem('allActivity');
-const initialValue = JSON.parse(saved);
-
-let sum= 0;
-let arr = []
-
-initialValue.map((day) =>{
-    let all = day.steps
-     arr.push(all)
-    })
-    for(var i = 0; i < arr.length; i++){
-        sum += arr[i]
-        }
-        setAllSteps(sum)
-}, []);
     return (
         <Wrapper>
             <h3>Din Aktivitet</h3>
 
             <StyledUL>
- {pastActivity.map(
+ {allActivity ?
+ allActivity.map(
                 (day, i)=>(
                     
 <li key={day.key}>
@@ -87,8 +65,8 @@ initialValue.map((day) =>{
     <progress id={day.key} max="20000" value={day.steps}></progress>
     </li>
 
-                )
-            )}
+                ) 
+            ) : <li></li> }
             </StyledUL>
             <ResultButton onClick={() => {
             setModalOpen(true)}}>

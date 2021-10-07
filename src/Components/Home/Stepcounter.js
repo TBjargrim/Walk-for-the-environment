@@ -49,7 +49,7 @@ useEffect(() =>{
 </ButtonDiv>
 <ModalSlideDown2 modalOpen2={modalOpen2} onClose={() => setModalOpen2(false)} children={children}>
 <ModalSlideDownWrapper2>
-    <h2>Vad du har gjort för <br/> miljön idag?</h2>
+    <h2>Vad du har gjort för <br/> miljön?</h2>
     <ImgLines>
     <img src={Line} alt='pink line'/>
     </ImgLines>
