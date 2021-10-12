@@ -3,8 +3,7 @@ import {Buttons} from '../../Styles/GlobalStyling'
 export const Wrapper = styled.div`
 display:flex;
 flex-direction:column;
-align-items:center;
-text-align:center;
+margin:50px 30px;
 img{
     width:500px;
     border-radius: 40px;
@@ -15,7 +14,15 @@ img{
 }
 
 `
-export const Button = styled.button `
+
+export const ButtonDiv = styled.div`
+width:100%;
+display:flex;
+justify-content:center;
+`
+export const ButtonDonate = styled.button `
+
+margin:30px 0 0 0;
 background:${Buttons.Background};
 width: 120px;
 height: 30px;

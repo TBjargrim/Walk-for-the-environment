@@ -7,7 +7,6 @@ import InfoThree from './InfoThree';
 import {TopDiv, WizzardWrapper, ButtonsArrow, DivButton,Front, Back, Check} from './StyledWizzard'
 import FilledCircel from '../../Images/FilledCircel.png'
 import Circel from '../../Images/Circel.png'
-import { Buttons } from '../../Styles/GlobalStyling';
 
 const StepWizzard = () => {
     const [steps, setSteps] = useState([
@@ -41,8 +40,6 @@ const StepWizzard = () => {
         }))
         setActiveStep(steps[index - 1]);
     }
-
-
     return (
         <TopDiv>
 <ul>
@@ -50,18 +47,14 @@ const StepWizzard = () => {
 return <li
 key={i}
 >
-    {activeStep.key === step.key ? <div><img src={FilledCircel} /></div>: <div><img src={Circel} /></div>}
-
+    {activeStep.key === step.key ? <div><img src={FilledCircel} alt='filled circle'/></div>: <div><img src={Circel} alt='circle'/></div>}
 </li>
-
     })}
 </ul>
-
 <WizzardWrapper>
     <div>
     {activeStep.component()}
     </div>
-
 <DivButton>
     <ButtonsArrow onClick={handleBack} disabled={steps[0].key===activeStep.key}><Back/></ButtonsArrow>
     <ButtonsArrow onClick={handleNext}>{steps[steps.length - 1].key !== activeStep.key ? <Front/> : <div>

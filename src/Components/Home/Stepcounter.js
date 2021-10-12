@@ -1,4 +1,4 @@
-import React,{useEffect, children} from 'react'
+import React,{useState,useEffect, children} from 'react'
 import {Link} from 'react-router-dom'
 import ModalSlideDown from '../../ModalSlideDown';
 import ModalSlideDown2 from '../../ModalSlideDown2';
@@ -15,8 +15,9 @@ import IceBear from '../../Images/IceBears.png'
 import {StepWrapper, InfoButton, DateDiv, ButtonStyle, ButtonDiv, DayCoins, NoCarsDiv, ModalSlideDownWrapper,ModalSlideDownWrapper2, ImgIceBears, ImgLines } from './StylingStep'
 
 
+
 const StepCounter = ( {ice, footPrint,currentDay,counter,setCounter, modalOpen,modalOpen2, setModalOpen,setModalOpen2, points, setPoints, currentMonth, date}) => {
-    
+    const [counterBar, setCounterBar] = useState();
 
 useEffect(() =>{
         let num = counter.toString()
@@ -32,18 +33,17 @@ useEffect(() =>{
             <InfoButton onClick={() => {
             setModalOpen(true)}}>i</InfoButton>
             <DateDiv>
-
             <p>Idag</p>
             <h5>{currentDay} {date} {currentMonth}</h5>
             </DateDiv>
-            <Count counter={counter} setCounter={setCounter} points={points} setPoints={setPoints}/>
+            <Count counter={counter} setCounter={setCounter} points={points} setPoints={setPoints} setCounterBar={setCounterBar} counterBar={counterBar}/>
             <ButtonDiv>
             <ButtonStyle><Link to='/activity'><DayCoins/>{points} poäng</Link></ButtonStyle>
 
             <ButtonStyle onClick={() => {
             setModalOpen2(true)}}>
                 <NoCarsDiv>
-                <img src={NoCars}/>
+                <img src={NoCars} alt='No cars logo'/>
                 </NoCarsDiv>
                 Dina minskade utsläpp</ButtonStyle>
 </ButtonDiv>

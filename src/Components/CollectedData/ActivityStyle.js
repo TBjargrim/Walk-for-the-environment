@@ -62,6 +62,7 @@ div{
         font-weight: 500;
 font-size: 16px;
 }
+
 }
 progress {
   border-radius: 50px; 
@@ -81,17 +82,18 @@ progress::-webkit-progress-value {
   border-radius: 50px;
 
 }
-progress::-moz-progress-bar {
-  /* style rules */
-}
     }
+    li:last-child{
+      margin:10px 10px 100px 10px;
+}
 `
 export const ResultButton = styled.button`
-margin:30px 0 0 0;
+margin:30px 0 60px 0;
 padding:0;
 display:flex;
 align-items:center;
 flex-direction:column;
+position:fixed;
 bottom:0;
 width:100%;
 height: 70px;

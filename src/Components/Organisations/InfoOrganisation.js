@@ -4,18 +4,22 @@ import { useLocation } from "react-router-dom"
 
 import Navbar from '../../Navbars/Navbar';
 
-import { Wrapper, Button } from './StylingInfo'
+import { Wrapper, ButtonDonate, ButtonDiv } from './StylingInfo'
 
 const InfoOrganisation = () => {
-
     let location = useLocation()
-    let { icon, description} = location.state.organisation;
+    let { icon, header1, header2, description1, description2} = location.state.organisation;
 
     return (
         <Wrapper>
             <img src={icon} alt='icon of organisation'/>
-           <p>{description}</p>
-           <Button><Link to='/thankyou'>Donera</Link></Button>
+            <h3>{header1}</h3>
+           <p>{description1}</p>
+            <h3>{header2}</h3>
+           <p>{description2}</p>
+           <ButtonDiv>
+           <ButtonDonate><Link to='/thankyou'>Donera</Link></ButtonDonate>
+           </ButtonDiv>
            <Navbar/>
         </Wrapper>
     )

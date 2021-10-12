@@ -1,12 +1,10 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 import { Link } from 'react-router-dom'
-import FootPrints from '../CollectedData/FootPrints'
-import Navbar from '../../Navbars/Navbar';
 import Leaf from '../../Images/Leaf.png'
 import ThankYouImg from '../../Images/ThankYouPink.png'
 import NoCars from '../../Images/NoCars.png'
 
-import{Wrapper, Container, StyledThankYou, SectionDiv,StyledNoCars, StyledLeaf} from './StylingThankYou'
+import{Wrapper, Container, StyledThankYou, SectionDiv,StyledNoCars, StyledLeaf, StyledThankYouButton} from './StylingThankYou'
 const ThankYou = ({sumPoints, footPrint, allActivity, setAllActivity }) => {
     
     const getName = localStorage.getItem('personalDetails');
@@ -14,13 +12,9 @@ const ThankYou = ({sumPoints, footPrint, allActivity, setAllActivity }) => {
 
     const personName = saveName.Name;
 
-  
         const handleClick = () =>{
             setAllActivity()
         }
-
- 
-
 
     return (
         <Wrapper>
@@ -29,7 +23,6 @@ const ThankYou = ({sumPoints, footPrint, allActivity, setAllActivity }) => {
             <Container>
             <h2>Tack {personName}!</h2>
             <h3>Alla hjältar bär inte mantel</h3>
-            {/* <FootPrints footPrint={footPrint} setFootPrint={setFootPrint} setSumPoints={setSumPoints} ice={ice} setIce={setIce}/> */}
             <SectionDiv>
               <StyledThankYou src={ThankYouImg} alt='Thank You'/>  <p>: {sumPoints} kr</p>
               </SectionDiv>
@@ -37,7 +30,7 @@ const ThankYou = ({sumPoints, footPrint, allActivity, setAllActivity }) => {
               <StyledNoCars src={NoCars} alt='No Driving'/> <p>: - {footPrint} g C02</p>
             </SectionDiv>
             </Container>
-          <button onClick={handleClick}><Link to='/home'>Tillbaka</Link></button>
+          <StyledThankYouButton onClick={handleClick}><Link to='/home'>Tillbaka</Link></StyledThankYouButton>
          
         </Wrapper>
     )

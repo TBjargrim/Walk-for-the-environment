@@ -35,6 +35,7 @@ height: 40px;
 font-size: 18px;
 letter-spacing:1px;
 color:${Styles.ColorWhite};
+cursor: pointer;
 `
 export const StyledBecomeMember = styled.button`
 margin-top:20px;
@@ -50,4 +51,5 @@ font-size: 18px;
 letter-spacing:1px;
 color: #F8F3F6;
 color:${Styles.PrimaryBlue};
+cursor: pointer;
 `

@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import Park from '../../Images/Park.png'
-import {Styles} from '../../Styles/GlobalStyling'
+import {Styles, Buttons} from '../../Styles/GlobalStyling'
 
 export const Wrapper = styled.div`
 height:90vh;
@@ -75,4 +75,21 @@ width:50px;
 export const StyledThankYou=styled.img`
 width:50px;
 height:50px;
+`
+export const StyledThankYouButton = styled.button`
+margin:30px 0 0 0;
+background:${Buttons.Background};
+width: 120px;
+height: 30px;
+box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+border-radius: 25px;
+border:none;
+cursor:pointer;
+a{
+    color:${Buttons.Color};
+    font-size: 14px;
+letter-spacing:1px;
+text-decoration: none;
+}
+
 `

@@ -1,7 +1,6 @@
 import styled from "styled-components";
 import {Styles} from '../../Styles/GlobalStyling'
 import {FaCoins} from 'react-icons/fa'
-import { CircularProgressbarWithChildren } from 'react-circular-progressbar';
 
 export const StepWrapper = styled.div`
 
@@ -12,7 +11,7 @@ width:25px;
 height:25px;
 position:absolute;
 right:25%;
-background: #EEEAED;
+background:transparent;
 border: 1px solid #A79CA3;
 box-sizing: border-box;
 border-radius:50%;
@@ -47,6 +46,7 @@ font-size: 40px;
 }
 @media screen and (max-width: 800px) {
     text-align:left;
+    margin:30px 0;
 }
 `
 export const ButtonDiv = styled.div`
@@ -89,44 +89,10 @@ img{
     width:25px;
 }
 `
-//Stepcounter
-export const CountWrapper = styled.div`
-width:100%;
-display:flex;
-justify-content:center;
 
-/* background:linear-gradient(#83C4FF,#FF1AB3); */
-div{
-    margin:10px 0 10px 0;
-    width:320px;
-}
-p{
-    margin:120px 0 0 0;
-    color: #81D2EF;
-    font-weight: 700;
-font-size: 18px;
-letter-spacing:1px;
-text-transform:uppercase;
-}
-`
-export const ProgressBar = styled(CircularProgressbarWithChildren)`
-color:linear-gradient(#83C4FF,#FF1AB3);
-/* color:black; */
 
-`
 
-export const ImageDiv = styled.div `
-position: absolute;
-margin-left: auto;
-margin-right: auto;
-left: 0;
-right: 0;
-top:50px;
-text-align: center;
-img{
-    max-width:30px;
-}
-`
+
 
 export const ModalSlideDownWrapper = styled.div`
 margin:0 0 100px 0;
