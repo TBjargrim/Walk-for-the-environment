@@ -18,7 +18,7 @@ sustainable travels.
 With a great teamwork we created a prototype in Figma,
 
 Lightmode
-![alt text](http://https://github.com/tbjargrim/Walk-for-the-environment/blob/main/src/Images/FootPrintsOpacity.png)
+<a href="https://github.com"><img src="https://github.com/tbjargrim/Walk-for-the-environment/blob/main/src/Images/FigmaLight.jpg" alt="Prototype in lightmode" border="0" /></a>
 
 Darkmode
 ![alt text](http://https://github.com/tbjargrim/Walk-for-the-environment/blob/main/src/Images/FootPrintsOpacity.png)
@@ -46,11 +46,11 @@ The following packages are being used:
 
 
 
-
+```
 **The great members of the UX/UI-team are,**
 
 - Me
-- Samira
+- [Samira Ahmed](https://github.com/samiraahmed90)
 - Juan
 - Raulf
 
