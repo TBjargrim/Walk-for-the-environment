@@ -17,10 +17,12 @@ sustainable travels.
 
 With a great teamwork we created a prototype in Figma,
 
-Lightmode
+Lightmode,
+
 <a href="https://github.com"><img src="https://github.com/tbjargrim/Walk-for-the-environment/blob/main/src/Images/FigmaLight.jpg" alt="Prototype in lightmode" border="0" /></a>
 
-Darkmode
+Darkmode,
+
 <a href="https://github.com"><img src="https://github.com/tbjargrim/Walk-for-the-environment/blob/main/src/Images/FigmaDark.jpg" border="0" /></a>
 
 ## Creating the application
