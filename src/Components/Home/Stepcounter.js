@@ -21,11 +21,17 @@ const StepCounter = ( {ice, footPrint,currentDay,counter,setCounter, modalOpen,m
 
 useEffect(() =>{
         let num = counter.toString()
+if(num > 1000){
      num =num.slice(0,-3);
      num =parseInt(num)
-    setPoints(num)
+     setPoints(num)
+}else{
+setPoints(0)
+}
 
-    }, []);
+   
+
+    });
 
     return (
 

@@ -27,13 +27,13 @@ const themeMode = theme === 'light' ? lightTheme : darkTheme;
 const [modalOpen, setModalOpen] = useState(false);
 const [modalOpen2, setModalOpen2] = useState(false);
 
-const [points, setPoints] = useState(9);
+const [points, setPoints] = useState(0);
 const [sumPoints, setSumPoints] = useState(0);
 
 const [allActivity, setAllActivity] = useState(JSON.parse(localStorage.getItem('allActivity')) || []);
 
 const [allSteps, setAllSteps] = useState();
-const [counter, setCounter] = useState(9000);
+const [counter, setCounter] = useState(8000);
 
 const [footPrint, setFootPrint] = useState();
 const [ice, setIce] =useState();
@@ -78,7 +78,7 @@ useEffect(()=>{
   localStorage.setItem('allActivity', JSON.stringify(pastActivity))
   setFootPrint(sumStepsGram)
   setIce(fixedNum)
-  })
+  }, [sumStepsGram, fixedNum])
 
 
   return (

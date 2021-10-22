@@ -26,12 +26,11 @@ let sumSteps= 0;
 let arrPoints = []
 let arrSteps = []
 
-allActivity && allActivity.map((day) =>{
+allActivity.forEach((day) =>{
     let allP = day.points
     let allS = day.steps
      arrPoints.push(allP)
      arrSteps.push(allS)
-
     }) 
 
     for(let i = 0; i < arrPoints.length; i++){
@@ -42,7 +41,7 @@ allActivity && allActivity.map((day) =>{
         }   
 setSumPoints(sumP)
 setAllSteps(sumSteps)
-}, [])
+})
 
     return (
         <Wrapper>

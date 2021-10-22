@@ -5,16 +5,17 @@ import ThankYouImg from '../../Images/ThankYouPink.png'
 import NoCars from '../../Images/NoCars.png'
 
 import{Wrapper, Container, StyledThankYou, SectionDiv,StyledNoCars, StyledLeaf, StyledThankYouButton} from './StylingThankYou'
-const ThankYou = ({sumPoints, footPrint, allActivity, setAllActivity }) => {
+const ThankYou = ({sumPoints, footPrint, setCounter, setAllActivity }) => {
     
     const getName = localStorage.getItem('personalDetails');
     const saveName = JSON.parse(getName)
 
     const personName = saveName.Name;
+    const handleClick = () =>{
+        setAllActivity()
+    
+    }
 
-        const handleClick = () =>{
-            setAllActivity()
-        }
 
     return (
         <Wrapper>

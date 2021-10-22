@@ -53,15 +53,15 @@ circle{
     fill:none;
     stroke:url(#GradientColor);
     stroke-width:32px;
-    stroke-dasharray:430;
-    stroke-dashoffset:430; 
+    stroke-dasharray:850;
+    stroke-dashoffset:850; 
     animation:anim 2s linear forwards;
 }
 @keyframes anim{
     100%{
-        stroke-dashoffset:${props => props.children[0]._owner.pendingProps.counterBar}; 
+        stroke-dashoffset:${props => props.children[0]._owner.memoizedProps.counterBar};
     }
-} 
+ } 
 `
  const ImageDiv = styled.div `
 img{
@@ -92,12 +92,11 @@ text-transform:uppercase;
 const Count = ({counter, setCounter, setCounterBar}) => {
 
 const end = 20000;
-//Get the right % in the animated progressbar
-let every = 472/20000;
+let every = 850/20000 ;
 let allBar = every * counter;
-
+let animatedValue = 850 - allBar
     useEffect((counter) => {
-        setCounterBar(allBar)
+        setCounterBar(animatedValue)
         const timer = setInterval(() => {
         setCounter(prevCount => prevCount + 1);
       }, 1000);
@@ -107,14 +106,13 @@ let allBar = every * counter;
       return () => {
         clearInterval(timer);
       };
-    }, []);
+    });
 
     return (
         <Container>
         <WrapperCircel>
         <Outer>
             <Inner>
-
                   <CountWrapper>
                   <ImageDiv>
                   <img src={FootPrints} alt="footprints" />
@@ -126,10 +124,10 @@ let allBar = every * counter;
             </Outer>
             <SVGElement xmlns="http://www.w3.org/2000/svg" version="1.1">
          <defs>
-            <linearGradient id="GradientColor">
-               <stop offset="0%" stopColor="#FF1AB3" />
-               <stop offset="100%" stopColor="#83C4FF" />
-            </linearGradient>
+         <linearGradient id="GradientColor" gradientTransform="rotate(45)">
+                              <stop offset="50%" stopColor="#FF1AB3" />
+                              <stop offset="100%" stopColor="#83C4FF" />
+                           </linearGradient>
          </defs>
          <circle cx="150" cy="151" r="136" strokeLinecap="round" />
  </SVGElement>

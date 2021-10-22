@@ -21,7 +21,7 @@ useEffect(()=>{
     let sum= 0;
     let arr = []
     
-    initialValue.map((day) =>{
+    initialValue.forEach((day) =>{
         let all = day.points
          arr.push(all)
         })
