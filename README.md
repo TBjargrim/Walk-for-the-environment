@@ -6,15 +6,15 @@ This course was divided into two sections. Section one was a group project with 
 
 ## From idea to prototype
 ---
-🕵️‍♀️ We got 4 weeks as a new group to come up with an epic idea about how we could help people to choose more sustainable travels. 
+ 🕵️‍♀️ We got 4 weeks as a new group to come up with an epic idea about how we could help people to choose more sustainable travels. \
 🧠 We did some brain-storming and decided to focus on how to get people to choose more sustainable options in the everyday routine.
 
 
 #### Our solution
-🚶 Choose to walk instead of taking the car and get points for the steps you make.
-👯  Compete with you collegues.
-👣 Compare your carbon footprint by walking instead of driving. 
-✨The points you make turns in to money and you can donate to organisations without opening your wallet 
+🚶 Choose to walk instead of taking the car and get points for the steps you make. \
+👯  Compete with you collegues. \
+👣 Compare your carbon footprint by walking instead of driving.  \
+✨The points you make turns in to money and you can donate to organisations without opening your wallet  \
 
 
 ## Prototype
@@ -52,7 +52,7 @@ We were aloud to make fictive features and to use hardcoded data so I decided to
 - In the last view (/thankyou) you can only choose one button "Tillbaka" and set all data to 0. 
 - One more view that you can access from the navbar, here is the dark/light mode switch locaded and the sign-out button. 
 
-<a href="https://github.com"><img src="https://github.com/tbjargrim/Walk-for-the-environment/blob/main/src/Images/WizzardImage.jpg" alt="WizzardImage" border="0" /></a>
+
 
  🏃‍♀️ Next steps for my application would be to connect it to a database, for example firebase to get the user-handling to work correctly. I would also turn this into a pwa to make it feel more like an mobile-app. And connect the API from Androids built-in pedometer. 
 
@@ -75,7 +75,7 @@ The following packages are being used:
 
  #### The great members of the UX/UI-team are
 
-🐸  Me
-🦔 [Samira Ahmed](https://github.com/samiraahmed90)
-🐧 Juan Ramon Fuenzalida Mercado
-🦊 Raulf Haidari
+🐸  Me \
+🦔 [Samira Ahmed](https://github.com/samiraahmed90) \
+🐧 Juan Ramon Fuenzalida Mercado \
+🦊 Raulf Haidari \
