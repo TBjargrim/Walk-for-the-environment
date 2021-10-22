@@ -27,7 +27,7 @@ const themeMode = theme === 'light' ? lightTheme : darkTheme;
 const [modalOpen, setModalOpen] = useState(false);
 const [modalOpen2, setModalOpen2] = useState(false);
 
-const [points, setPoints] = useState(0);
+const [points, setPoints] = useState();
 const [sumPoints, setSumPoints] = useState(0);
 
 const [allActivity, setAllActivity] = useState(JSON.parse(localStorage.getItem('allActivity')) || []);

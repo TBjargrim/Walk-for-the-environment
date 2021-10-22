@@ -19,7 +19,7 @@ useEffect(() => {
              })
              setAllActivity([...pastActivity ])
             }
-})
+},[counter, currentMonth, date, points, setAllActivity])
 useEffect(()=>{
 let sumP= 0;
 let sumSteps= 0;
