@@ -1,5 +1,10 @@
 import styled from 'styled-components'
 import {Styles} from '../../Styles/GlobalStyling'
+
+// Vi ville skapa en första sida så gav energi, med lite starkare färger.
+//Namnet säger mycket om innehållet och mer information får du några klick in.
+//Knapparna är stora för att du lättare ska kunna trycka rätt på mobilen.
+
 export const LandingWrapper = styled.div`
 width:100%;
 display:flex;
