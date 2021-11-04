@@ -61,9 +61,9 @@ We were allowed to make fictitious features and to use hardcoded data so I decid
 
 ## Installation
 
-Run git clone,
-cd into the right folder
-Run npm install.
+Run git clone \
+cd into the right folder \
+run npm install \
 
 The following packages are being used:
 
