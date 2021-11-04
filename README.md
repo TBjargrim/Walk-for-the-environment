@@ -1,4 +1,4 @@
-# Gå för miljön / Walk for the environment
+# Gå för miljön / Walk for the environment - Therese Bjärgrim
 
 ## UX - Frontend
 
@@ -28,6 +28,8 @@ Darkmode,
 
 <a href="https://github.com"><img src="https://github.com/tbjargrim/Walk-for-the-environment/blob/main/src/Images/FigmaDark.jpg" border="0" /></a>
 
+[Link to our prototype](https://www.figma.com/file/EyrKDRV023TsbCvvOMdlIW/g%C3%A5-f%C3%B6r-milj%C3%B6n?node-id=0%3A1)
+
 ### User-testing
 
 👀 We interviewed some potential users. We gave them some tasks, for example to donate to an organisation or to find the dark/light mode switch. They liked the overall feel and layout. It was easy to manoeuvre. The two things we could improve were the position of the dark/light mode switch and to get more information about the app even before you get to the homepage, for example in a step-by-step wizard.
@@ -46,14 +48,14 @@ I decided to use,
 
 We were allowed to make fictitious features and to use hardcoded data so I decided to make a stepcounter to start with, and hardcoded data for past activites and organisations.
 
-👍 Because the prototype had some opportunities for improvement I made some changes in the final product.
+👍 Because the prototype had some opportunities for improvement (shown after the user-testing) I made some changes in the final product.
 
 - A fictitious log-in.
 - The info-wizard that only shows after you create an account (the first time you use the app).
 - In the last view (/thankyou) you can only choose one button "Tillbaka" and set all data to 0.
 - One more view that you can access from the navbar, here is the dark/light mode switch locaded and the sign-out button.
-
-🏃‍♀️ Next steps for my application would be to connect it to a database, for example firebase to get the user-handling to work correctly. I would also turn this into a pwa to make it feel more like an mobile-app, and connect the API from Androids built-in pedometer.
+  [Link to the updates prototype](https://www.figma.com/file/ofvvdXv878psZsyrytedQM/Untitled)
+  🏃‍♀️ Next steps for my application would be to connect it to a database, for example firebase to get the user-handling to work correctly. I would also turn this into a pwa to make it feel more like an mobile-app, and connect the API from Androids built-in pedometer.
 
 ## Installation
 

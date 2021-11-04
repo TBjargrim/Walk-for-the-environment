@@ -54,7 +54,7 @@ export const WizzardWrapper = styled.div`
       margin: 20px 50px 20px 50px;
       font-weight: 500;
       font-size: 16px;
-      line-height: 15px;
+      line-height: 20px;
     }
   }
   div {

@@ -14,9 +14,7 @@ import {
 
 const YourActivity = ({
   allSteps,
-  setAllSteps,
   sumPoints,
-  setSumPoints,
   counter,
   setModalOpen,
   modalOpen,
