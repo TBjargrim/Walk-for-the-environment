@@ -54,7 +54,9 @@ We were allowed to make fictitious features and to use hardcoded data so I decid
 - The info-wizard that only shows after you create an account (the first time you use the app).
 - In the last view (/thankyou) you can only choose one button "Tillbaka" and set all data to 0.
 - One more view that you can access from the navbar, here is the dark/light mode switch locaded and the sign-out button.
-  [Link to the updates prototype](https://www.figma.com/file/ofvvdXv878psZsyrytedQM/Untitled)
+
+  [Link to the updated prototype](https://www.figma.com/file/ofvvdXv878psZsyrytedQM/Untitled)
+
   🏃‍♀️ Next steps for my application would be to connect it to a database, for example firebase to get the user-handling to work correctly. I would also turn this into a pwa to make it feel more like an mobile-app, and connect the API from Androids built-in pedometer.
 
 ## Installation
